@@ -1,12 +1,16 @@
+import java.time.LocalDate;
+
 public class Ninja {
 
     private String name;
     private Weapon weapon;
+    private LocalDate createdAt;
 
-    public Ninja(String name, Weapon weapon) {
+    public Ninja(String name, Weapon weapon, LocalDate createdAt) {
         this.name = name;
         // Using the copy method to create a new Weapon instance with the same name
         this.weapon = weapon.copy();
+        this.createdAt = createdAt;
     }
 
     public String getName() {
@@ -26,6 +30,6 @@ public class Ninja {
     }
 
     public String toString() {
-        return "Ninja called " + name + " with a " + weapon;
+        return "Ninja called " + name + " with a " + weapon + ", created at " + createdAt;
     }
 }

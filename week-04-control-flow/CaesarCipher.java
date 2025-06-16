@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -23,10 +22,10 @@ public class CaesarCipher {
         keyboard.close();
 
         // Read in the file and prepare to write to the encrypted output
-        Scanner sourceFile = new Scanner(new File("loris.txt")); // Reads from the source file
+        Scanner sourceFile = new Scanner(new File("week-04-control-flow/loris.txt")); // Reads from the source file
         sourceFile.useDelimiter(""); // Read one character at a time
 
-        PrintWriter encrypted = new PrintWriter("encrypted.txt"); // Write encrypted output to a file
+        PrintWriter encrypted = new PrintWriter("week-04-control-flow/encrypted.txt"); // Write encrypted output to a file
 
         // Process each character in the file
         while (sourceFile.hasNext()) {
